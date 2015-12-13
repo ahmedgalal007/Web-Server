@@ -6,9 +6,9 @@ var PORT = process.env.PORT || 4000;
 
 app.use(middleware.logger);
 
-app.get('/', function (req, res , next) {
-	res.send('Hello Express!');
-});
+// app.get('/', function (req, res , next) {
+// 	res.send('Hello Express!');
+// });
 
 app.get('/about', middleware.requireAuthentication, function (req, res, next) {
 	res.end('<h1> About US. </h1>');
